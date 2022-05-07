@@ -1,0 +1,14 @@
+﻿  pch.cpp
+  ini.c
+  inih.cpp
+  injection.cpp
+  main.cpp
+  memory.cpp
+  utils.cpp
+C:\Users\Bendis\Desktop\loader\loader\main.cpp(738): warning C4715: 'WinMain': not all control paths return a value
+     Creating library .\out\release\loader.lib and object .\out\release\loader.exp
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 4349 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  loader.vcxproj -> C:\Users\Bendis\Desktop\loader\loader\out\release\loader.exe

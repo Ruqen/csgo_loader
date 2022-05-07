@@ -1,0 +1,16 @@
+#pragma once
+
+// includes
+#include <iostream>
+#include <fstream>
+#include <filesystem>
+
+#include <windows.h>
+#include <string.h>
+
+// defs
+#include "utils.hpp"
+#include "console.hpp"
+
+// other
+using namespace std::chrono_literals;
