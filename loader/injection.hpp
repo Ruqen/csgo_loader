@@ -44,7 +44,7 @@ public:
 	~c_injector() = default;
 
 	// Initialize routine, with path to DLL and isCustomDLL arguments with user input
-	bool initalize(std::filesystem::path dll_path, bool isCustomDLL);
+	bool initalize(std::filesystem::path dll_path, bool isCustomDLL, std::string customDLLName);
 };
 
 inline auto g_injector = std::make_unique<c_injector>();

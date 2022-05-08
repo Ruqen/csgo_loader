@@ -2,7 +2,7 @@
 #include "injection.hpp"
 #include "skCrypter.h"
 
-bool c_injector::initalize( const std::filesystem::path dll_path, bool isCustomDLL )
+bool c_injector::initalize( const std::filesystem::path dll_path, bool isCustomDLL, std::string customDLLName )
 {
 		log_debug( L"Closing processes..." );
 
@@ -54,7 +54,7 @@ bool c_injector::initalize( const std::filesystem::path dll_path, bool isCustomD
 		if ( !this->map( string::to_unicode( "csgo.exe" ), string::to_unicode( "serverbrowser.dll" ), dll_buffer ) ) {
 			return false;
 		}
-	} else if ( !isCustomDLL ) {
+	} else if ( !isCustomDLL && customDLLName == "osiris" ) {
 		log_debug( L"Decrypting buffer - may take a while." );
 		std::vector<std::uint8_t> osiris_buffer( std::begin( osiris_data ), std::end( osiris_data ) );
 

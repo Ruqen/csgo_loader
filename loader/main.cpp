@@ -50,7 +50,6 @@ private:
 
 };
 
-
 void dgpsiet::szraoatjfrsvfdfn(double qlzmzsif, std::string lgkbpyuxcz, int uuvcexl, int umjpk, double esoljqmx) {
     double zlbkgnfcpki = 45839;
     std::string ijzsyo = "qfffxucduyqug";
@@ -671,7 +670,7 @@ INT WINAPI WinMain( _In_ HINSTANCE hInstance,
 	system("cls");
 	std::cout << dye::yellow("[ALLAHWARE] ") << skCrypt("Please choose an option:") << std::endl;
 	std::cout << dye::light_blue("[ALLAHWARE] ") << skCrypt("1 --> CS:GO VAC bypass & inject a custom DLL") << std::endl;
-	std::cout << dye::light_blue("[ALLAHWARE] ") << skCrypt("2 --> CS:GO VAC bypass & inject a built-in (Osiris) DLL") << std::endl;
+	std::cout << dye::light_blue("[ALLAHWARE] ") << skCrypt("2 --> CS:GO VAC bypass & inject one of the built-in DLL's") << std::endl;
 	std::cout << dye::light_blue("[ALLAHWARE] ") << skCrypt("3 --> Exit") << std::endl;
 	std::cout << dye::light_blue("[ALLAHWARE] ") << skCrypt("Your choice: ");
 	std::int32_t choice = 0;
@@ -705,7 +704,7 @@ INT WINAPI WinMain( _In_ HINSTANCE hInstance,
 			return EXIT_FAILURE;
 		}
 	
-		g_injector->initalize(szFile, true);
+		g_injector->initalize(szFile, true, "allahisikeyim");
 		
 		log_ok( L"Done." );
 
@@ -723,7 +722,28 @@ INT WINAPI WinMain( _In_ HINSTANCE hInstance,
 			return EXIT_FAILURE;
 		}
 
-		g_injector->initalize(path, false);
+        std::cout << dye::yellow("[ALLAHWARE] ") << skCrypt("Please choose an option: (more will come trust me)") << std::endl;
+        std::cout << dye::light_blue("[ALLAHWARE] ") << skCrypt("1 --> Osiris") << std::endl;
+        std::cout << dye::light_blue("[ALLAHWARE] ") << skCrypt("2 --> - (not active)") << std::endl;
+        std::cout << dye::light_blue("[ALLAHWARE] ") << skCrypt("3 --> Exit") << std::endl;
+        std::cout << dye::light_blue("[ALLAHWARE] ") << skCrypt("Your choice: ");
+        std::int32_t secondChoice = 0;
+        std::cin >> secondChoice;
+        if ( secondChoice == 1 )
+        {
+            system("cls");
+            g_injector->initalize(path, false, "osiris");
+        } else if ( secondChoice == 3 )
+        {
+            system("cls");
+            return EXIT_SUCCESS;
+        } else
+        {
+            system("cls");
+            std::cout << dye::red("[ALLAHWARE] ") << skCrypt("you fucked up") << std::endl;
+            std::this_thread::sleep_for( 3s );
+            return EXIT_FAILURE;
+        }
 
 		log_ok( L"Done." );
 
@@ -732,7 +752,13 @@ INT WINAPI WinMain( _In_ HINSTANCE hInstance,
 	{
 		system("cls");
 		return EXIT_SUCCESS;
-	}
+	} else
+    {
+        system("cls");
+        std::cout << dye::red("[ALLAHWARE] ") << skCrypt("you fucked up") << std::endl;
+        std::this_thread::sleep_for( 3s );
+        return EXIT_FAILURE;
+    }
 
 	system("pause");
 }

@@ -75,7 +75,7 @@
     <ClInclude Include="vac3_data.hpp">
       <Filter>utils\vac3_bypass</Filter>
     </ClInclude>
-        <ClInclude Include="osiris_data.hpp">
+    <ClInclude Include="osiris_data.hpp">
       <Filter>utils\osiris</Filter>
     </ClInclude>
     <ClInclude Include="inih\inih.hpp">
